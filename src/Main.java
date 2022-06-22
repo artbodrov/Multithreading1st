@@ -4,10 +4,9 @@ public class Main {
         ThreadB b = new ThreadB();
         ThreadC c = new ThreadC();
         a.start();
-        b.join();
-        c.join();
+        a.join();
         b.start();
-        c.join();
+        b.join();
         c.start();
     }
 }
